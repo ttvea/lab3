@@ -9,6 +9,28 @@ Copyright (c) 2015 Daniel Eden
 .padding{
   padding: 20px;
 }
+
+.image{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+}
+.progress-bar {
+  width: 700px;
+  height: 5px;
+
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+}
+
+.progress {
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgb(29, 216, 216);
+}
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
