@@ -7,12 +7,20 @@ Licensed under the MIT license - http://opensource.org/licenses/MIT
 Copyright (c) 2015 Daniel Eden
 */
 .padding{
-  padding: 20px;
+  padding: 2
+  0px;
 }
-
+.paddingTop{
+  padding-top: 10px;
+}
+.flexMenu{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 .image{
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 120%;
 }
 .flex{
   display: flex;
