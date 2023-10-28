@@ -13,6 +13,9 @@ Copyright (c) 2015 Daniel Eden
 .paddingTop{
   padding-top: 10px;
 }
+.paddingTop2{
+  padding-top: 60px;
+}
 .flexMenu{
   display: flex;
   justify-content: space-between;
