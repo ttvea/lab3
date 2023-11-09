@@ -155,59 +155,23 @@
                 <!-- Các phần tử HTML khác đã được đề cập trong câu hỏi -->
 
 
-                <textarea id="outputTextArea" rows="3" cols="30" placeholder="Kết quả"></textarea>
-
-                <script>
-                  var danhSachSinhVien = [];
-                  function luuThongTin() {
-                    var hoTen = document.getElementById("hoTen").value;
-                    var mssv = document.querySelector('input[placeholder="MSSV"]').value;
-                    var ngaySinhNgay = document.querySelector('select[name="myComboBox"]').value;
-                    var ngaySinhThang = document.querySelector('select[name="myComboBox2"]').value;
-                    var ngaySinhNam = document.querySelector('input[placeholder="yy"]').value;
-
-                    var ngaySinh = ngaySinhNgay+"/"+ngaySinhThang+"/"+ngaySinhNam;
-
-                    var sinhVien = {
-                      hoTen: hoTen,
-                      mssv: mssv,
-                      ngaySinh: ngaySinh
-                    };
-                    danhSachSinhVien.push(sinhVien);
-                    var output = "";
-                    for (var i in danhSachSinhVien) {
-                      var sv = danhSachSinhVien[i];
-                      output += " " + sv.hoTen + "\t"+"\t";
-                      output += sv.mssv + "\t"+"\t";
-                      output+="\t"+sv.ngaySinh+"\t"+"\n";
-                      
-                    }
-
-                    var outputTextArea = document.getElementById("outputTextArea");
-                    outputTextArea.value = output;
-                  }
-                  
-                    
-                </script>
-
-
-
-
+                <textarea id="outputTextArea" rows="3" cols="30" ></textarea>
               </div>
               <div class="background">
                 <div class="information">
                   <label style="font-size: 15px; color: rgb(26, 201, 213);">Họ và tên</label>
-                  <input style="width: 200px;" id="hoTen" placeholder="Họ và tên">
+                  <input style="width: 200px;" id="hoTen" placeholder="Họ và tên" value="">
                 </div>
                 <div class="information">
                   <label style="font-size: 15px; color: rgb(26, 201, 213);">Mã số sinh viên</label>
-                  <input style="width: 200px;" id="MSSV" placeholder="MSSV">
+                  <input style="width: 200px;" id="MSSV" value="" placeholder="MSSV">
                 </div>
+                <div id="messageContainer"></div>
                 <div class="information">
                   <label style="font-size: 15px; color: rgb(26, 201, 213);">Ngày sinh</label>
                   <div class="display2">
-                    <select name="myComboBox">
-                      <option disabled selected>dd</option>
+                    <select name="myComboBox" id="myComboBox">
+                      <option disabled selected hidden value="">dd</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -240,8 +204,8 @@
                       <option value="30">30</option>
                       <option value="31">31</option>
                     </select>
-                    <select name="myComboBox2">
-                      <option disabled selected>mm</option>
+                    <select name="myComboBox2" id="myComboBox2">
+                      <option disabled selected hidden value="">mm</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -255,13 +219,14 @@
                       <option value="11">11</option>
                       <option value="12">12</option>
                     </select>
-                    <input size="3px" placeholder="yy">
-  
+                    <input size="3px" id="yy" value="" placeholder="yy">
+
                   </div>
                   <label style="font-size: 15px; color: rgb(26, 201, 213);">Chức năng</label>
                   <div class="display2">
-  
-                    <button onclick="luuThongTin();" style="width: 69px;  border: hidden;">Thêm</button>
+
+                    <button onclick="luuThongTin();"
+                      style="width: 69px;  border: hidden;">Thêm</button>
                     <button style="width: 60px; border: hidden;">Sửa</button>
                     <button style="width: 65px;  border: hidden;">Xóa</button>
                   </div>
@@ -270,8 +235,8 @@
                   </div>
                 </div>
               </div>
-              </div>
-              
+            </div>
+
 
           </div>
 
@@ -280,7 +245,60 @@
       <!--// end row -->
     </div>
   </div>
+  <script>
+    var danhSachSinhVien = [];
+    function luuThongTin() {
+      var output = "";
+      var hoTen = document.getElementById("hoTen").value;
+      var mssv = document.querySelector('input[placeholder="MSSV"]').value;
+      var ngaySinhNgay = document.querySelector('select[name="myComboBox"]').value;
+      var ngaySinhThang = document.querySelector('select[name="myComboBox2"]').value;
+      var ngaySinhNam = document.querySelector('input[placeholder="yy"]').value;
+      if (hoTen===""||mssv===""||ngaySinhNam===""||ngaySinhThang===""||ngaySinhNam==="") {
+        output="Thiếu dữ liệu";
+      }else{
+        var ngaySinh = ngaySinhNgay + "/" + ngaySinhThang + "/" + ngaySinhNam;
 
+      var sinhVien = {
+        hoTen: hoTen,
+        mssv: mssv,
+        ngaySinh: ngaySinh
+      };
+      danhSachSinhVien.push(sinhVien);
+      
+      for (var i in danhSachSinhVien) {
+        var sv = danhSachSinhVien[i];
+        output += " " + sv.hoTen + "\t" + "\t";
+        output += sv.mssv + "\t" + "\t";
+        output += "\t" + sv.ngaySinh + "\t" + "\n";
+
+      }
+      setText();
+      }
+      
+
+      var outputTextArea = document.getElementById("outputTextArea");
+      outputTextArea.value = output;
+      
+    }
+    function setText(){
+      var hotenInput = document.getElementById("hoTen");
+      hotenInput.value = "";
+      var mssvInput = document.getElementById("MSSV");
+      mssvInput.value = "";
+      var yyInput = document.getElementById("yy");
+      yyInput.value = "";
+      var ddInput = document.getElementById("myComboBox");
+      ddInput.value = "";
+      var mmInput = document.getElementById("myComboBox2");
+      mmInput.value = "";
+    }
+   
+
+
+
+
+  </script>
   <script src="vendor/jquery.min.js" type="text/javascript"></script>
   <script src="vendor/jquery-migrate.min.js" type="text/javascript"></script>
   <script src="vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
