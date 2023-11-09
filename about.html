@@ -17,6 +17,7 @@
 
     <!-- PAGE LEVEL PLUGIN STYLES -->
     <link href="css/animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/cssLab4.css">
 
     <!-- THEME STYLES -->
     <link href="css/layout.min.css" rel="stylesheet" type="text/css"/>
@@ -44,8 +45,42 @@
                         <div class="paddingTop">
                             <ul class="flexMenu">
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="index.html">Home</a></li>
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="about.html">About</a></li>
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#experience">Experience</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="about.html" style="color: aqua;">About</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="tab1.html"
+                                    onclick="showLab4()">Lab4
+                                </a>
+
+                            </li>
+                            <div id="tab1" class="tab-content" style="display: none;">
+                                <button class="tab-button"><a href="tab1.html"><b
+                                            style="color: aqua;">Tab1</b></a></button>
+
+                            </div>
+
+                            <div id="tab2" class="tab-content" style="display: none;">
+                                <button class="tab-button"><a href="lab4.html"><b
+                                            style="color: aqua;">Tab2</b></button>
+                            </div>
+
+                            <div id="tab3" class="tab-content" style="display: none;">
+                                <button class="tab-button"><a href="lab4.html"><b
+                                            style="color: aqua;">Tab3</b></button>
+                            </div>
+                            <script>
+                                function showLab4() {
+                                    var tabContent = document.getElementsByClassName("tab-content");
+                                    for (var i = 0; i < tabContent.length; i++) {
+                                        tabContent[i].style.display = "none";
+                                    }
+
+                                    document.getElementById("tab1").style.display = "block";
+                                    document.getElementById("tab2").style.display = "block";
+                                    document.getElementById("tab3").style.display = "block";
+                                }
+                               
+                                
+                                
+                            </script>
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#work">Work</a></li>
                                 <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#contact">Contact</a></li>
                             </ul>
@@ -78,27 +113,27 @@
                
                 <div class="col-sm-8 col-sm-offset-1">
                     <div class="margin-b-60">
-                        <p>Tôi là Nguyễn Thiện, một người luôn chú tâm về lượng thời gian để hoàn thành công việc. Tôi là một lập trình viên, chuyên làm về Web Designer và Front-end.</p>
+                        <p>Tôi là Nguyễn Thiện, một người luôn chú tâm về lượng thời gian để hoàn thành công việc. Tôi là một lập trình viên, chuyên làm về Web Designer.</p>
                         <p>Tôi có tính cách khá hướng nội, vì vậy nếu có điều gì xin hãy liên hệ với tôi, tôi luôn sẵn sàng đón nhận mọi vấn đề.</p>
 
                         
                     </div>
                    
-                    <div class="flex"  style="font-size: 17px; color: aqua;">PHP<p style="color: aqua;">20%</p>
+                    <div class="flex"  style="font-size: 17px; color: aqua;">PHP<p style="color: aqua;">0%</p>
                     </div>
                         <div class="progress-bar">
-                            <div class="progress" style="width: 20%;"></div>
+                            <div class="progress" style="width: 0%;"></div>
                         <div class="flex" style="font-size: 17px; color: aqua;">HTML5<p style="color: aqua;">50%</p></div>
                              <div class="progress-bar">
                                 <div class="progress" style="width: 50%;"></div>
 
-                                <div class="flex"  style="font-size: 17px; color: aqua;">JavaSript<p style="color: aqua;">52%</p></div>
+                                <div class="flex"  style="font-size: 17px; color: aqua;">JavaSript<p style="color: aqua;">20%</p></div>
                                     <div class="progress-bar">
-                                        <div class="progress" style="width: 52%;"></div>
+                                        <div class="progress" style="width: 20%;"></div>
 
-                                            <div class="flex" style="font-size: 17px; color: aqua;">Photoshop<p style="color: aqua;">60%</p></div>
+                                            <div class="flex" style="font-size: 17px; color: aqua;">Photoshop<p style="color: aqua;">40%</p></div>
                                                 <div class="progress-bar">
-                                                    <div class="progress" style="width: 60%;"></div>
+                                                    <div class="progress" style="width: 40%;"></div>
                    </div>
                         
 

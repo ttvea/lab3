@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+<!-- BEGIN HEAD -->
+
+<head>
+  <meta charset="utf-8" />
+  <title>NguyenThienIT</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="" name="description" />
+  <meta content="" name="author" />
+
+  <!-- GLOBAL MANDATORY STYLES -->
+
+  <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css" />
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="css/cssLab4.css">
+
+  <!-- PAGE LEVEL PLUGIN STYLES -->
+  <link href="css/animate.css" rel="stylesheet">
+
+  <!-- THEME STYLES -->
+  <link href="css/layout.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<!-- END HEAD -->
+
+<!-- BODY -->
+
+<body id="body" data-spy="scroll" data-target=".header">
+
+  <!--========== HEADER ==========-->
+  <header class="header navbar-fixed-top">
+    <!-- Navbar -->
+    <nav class="navbar" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="flexMenu">
+          <!-- Logo -->
+          <div class="logo">
+            <a class="logo-wrap" href="#body">
+              <img class="logo-img logo-img-main" src="img/logo.png" alt="Asentus Logo">
+              <img class="logo-img logo-img-active" src="img/logo-dark.png" alt="Asentus Logo">
+            </a>
+          </div>
+          <!-- End Logo -->
+          <div>
+            <div class="paddingTop">
+              <ul class="flexMenu">
+                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="index.html">Home</a>
+                </li>
+                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="about.html">About</a>
+                </li>
+                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="tab1.html"
+                    style="color: aqua;">Lab4
+                  </a>
+
+                </li>
+                <div id="tab1" class="padd">
+                  <button class="tab-button">
+                    <a href="tab1.html">
+                      <b style="color: aqua;">Requirement</b></a>
+
+
+                </div>
+
+                <div id="tab2" class="padd">
+                  <button class="tab-button"><a href="tab2.html"><b style="color: aqua;">Design</b></button>
+                </div>
+
+                <div id="tab3" class="padd">
+                  <button class="tab-button"><a onclick="showTab('NdTab3');"><b
+                        style="color: aqua;"><u>Implement</u></b></button>
+                </div>
+                <!--  -->
+
+
+
+                <script>
+                  function showLab4() {
+                    var tabContent = document.getElementsByClassName("tab-content");
+                    for (var i = 0; i < tabContent.length; i++) {
+                      tabContent[i].style.display = "none";
+                    }
+
+                    document.getElementById("tab1").style.display = "block";
+                    document.getElementById("tab2").style.display = "block";
+                    document.getElementById("tab3").style.display = "block";
+                  }
+                  function showTab(tabId) {
+                    // Ẩn tất cả các tab
+                    var tabContents = Array.from(document.getElementsByClassName('tab-content'));
+                    tabContents.forEach(function (tab) {
+                      tab.style.display = 'none';
+                    });
+
+                    // Hiển thị tab được chọn
+                    var selectedTab = document.getElementById(tabId);
+                    selectedTab.style.display = 'block';
+
+                    // Thêm mã để hiển thị nội dung của "Lab1" khi tab "Lab1" được chọn
+                    if (tabId === 'NdTab1') {
+                      var lab1Content = document.getElementById('NdTab1').innerHTML;
+                      document.getElementById('NdTab1').innerHTML = lab1Content;
+
+                    }
+                  }
+
+
+                </script>
+                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#work">Work</a></li>
+                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse nav-collapse">
+
+        </div>
+        <!-- End Navbar Collapse -->
+      </div>
+    </nav>
+    <!-- Navbar -->
+  </header>
+  <!--========== END HEADER ==========-->
+
+  <!--========== SLIDER ==========-->
+  <div class="promo-block parallax-window" data-parallax="scroll" data-image-src="img/1920x1080/ttvea.jpg">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="promo-block-divider">
+            <div id="NdTab3">
+
+              <div class="tab3">
+                <p style="font-size: 20px; color: black;"><b>Student Management</b></p>
+              </div>
+              <!-- 70% -->
+              <div class="information2">
+                <div class="display2">
+                  <label class="label2">Họ và tên</label>
+                  <label class="label2">Mã số sinh viên</label>
+                  <label class="label2">Ngày sinh</label>
+                </div>
+
+
+                <!-- Các phần tử HTML khác đã được đề cập trong câu hỏi -->
+
+
+                <textarea id="outputTextArea" rows="3" cols="30" placeholder="Kết quả"></textarea>
+
+                <script>
+                  var danhSachSinhVien = [];
+                  function luuThongTin() {
+                    var hoTen = document.getElementById("hoTen").value;
+                    var mssv = document.querySelector('input[placeholder="MSSV"]').value;
+                    var ngaySinhNgay = document.querySelector('select[name="myComboBox"]').value;
+                    var ngaySinhThang = document.querySelector('select[name="myComboBox2"]').value;
+                    var ngaySinhNam = document.querySelector('input[placeholder="yy"]').value;
+
+                    var ngaySinh = ngaySinhNgay+"/"+ngaySinhThang+"/"+ngaySinhNam;
+
+                    var sinhVien = {
+                      hoTen: hoTen,
+                      mssv: mssv,
+                      ngaySinh: ngaySinh
+                    };
+                    danhSachSinhVien.push(sinhVien);
+                    var output = "";
+                    for (var i in danhSachSinhVien) {
+                      var sv = danhSachSinhVien[i];
+                      output += " " + sv.hoTen + "\t"+"\t";
+                      output += sv.mssv + "\t"+"\t";
+                      output+="\t"+sv.ngaySinh+"\t"+"\n";
+                      
+                    }
+
+                    var outputTextArea = document.getElementById("outputTextArea");
+                    outputTextArea.value = output;
+                  }
+                  
+                    
+                </script>
+
+
+
+
+              </div>
+              <div class="background">
+                <div class="information">
+                  <label style="font-size: 15px; color: rgb(26, 201, 213);">Họ và tên</label>
+                  <input style="width: 200px;" id="hoTen" placeholder="Họ và tên">
+                </div>
+                <div class="information">
+                  <label style="font-size: 15px; color: rgb(26, 201, 213);">Mã số sinh viên</label>
+                  <input style="width: 200px;" id="MSSV" placeholder="MSSV">
+                </div>
+                <div class="information">
+                  <label style="font-size: 15px; color: rgb(26, 201, 213);">Ngày sinh</label>
+                  <div class="display2">
+                    <select name="myComboBox">
+                      <option disabled selected>dd</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                      <option value="18">18</option>
+                      <option value="19">19</option>
+                      <option value="20">20</option>
+                      <option value="21">21</option>
+                      <option value="22">22</option>
+                      <option value="23">23</option>
+                      <option value="24">24</option>
+                      <option value="25">25</option>
+                      <option value="26">26</option>
+                      <option value="27">27</option>
+                      <option value="28">28</option>
+                      <option value="29">29</option>
+                      <option value="30">30</option>
+                      <option value="31">31</option>
+                    </select>
+                    <select name="myComboBox2">
+                      <option disabled selected>mm</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                    <input size="3px" placeholder="yy">
+  
+                  </div>
+                  <label style="font-size: 15px; color: rgb(26, 201, 213);">Chức năng</label>
+                  <div class="display2">
+  
+                    <button onclick="luuThongTin();" style="width: 69px;  border: hidden;">Thêm</button>
+                    <button style="width: 60px; border: hidden;">Sửa</button>
+                    <button style="width: 65px;  border: hidden;">Xóa</button>
+                  </div>
+                  <div class="display2">
+                    <input size="15px" placeholder="Seach"><button>Tìm kiếm</button>
+                  </div>
+                </div>
+              </div>
+              </div>
+              
+
+          </div>
+
+        </div>
+      </div>
+      <!--// end row -->
+    </div>
+  </div>
+
+  <script src="vendor/jquery.min.js" type="text/javascript"></script>
+  <script src="vendor/jquery-migrate.min.js" type="text/javascript"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+  <!-- PAGE LEVEL PLUGINS -->
+  <script src="vendor/jquery.easing.js" type="text/javascript"></script>
+  <script src="vendor/jquery.back-to-top.js" type="text/javascript"></script>
+  <script src="vendor/jquery.smooth-scroll.js" type="text/javascript"></script>
+  <script src="vendor/jquery.wow.min.js" type="text/javascript"></script>
+  <script src="vendor/jquery.parallax.min.js" type="text/javascript"></script>
+  <script src="vendor/jquery.appear.js" type="text/javascript"></script>
+  <script src="vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
+  <script src="vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+
+  <!-- PAGE LEVEL SCRIPTS -->
+  <script src="js/layout.min.js" type="text/javascript"></script>
+  <script src="js/components/progress-bar.min.js" type="text/javascript"></script>
+  <script src="js/components/masonry.min.js" type="text/javascript"></script>
+  <script src="js/components/wow.min.js" type="text/javascript"></script>
+
+</body>
+<!-- END BODY -->
+
+</html>

@@ -1,0 +1,99 @@
+
+.tab-header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+.tab-button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: background-color 0.3s;
+}
+
+.tab-button:hover {
+  background-color: rgb(142, 59, 206);
+  border-radius: 10px;
+}
+.tab-button.active {
+  background-color: rgb(142, 59, 206);
+}
+.tab-content{
+  display: none;
+  padding: 5px;
+  padding-top: 24px;
+}
+.padd {
+  padding: 5px;
+  padding-top: 23px;
+ 
+}
+.ndTab{
+  padding-top: 50px;
+}
+.imageTab2{
+  position: absolute;
+  padding-top: 50px;
+  padding-left: 300px;
+}
+.display{
+  padding-bottom: 10px;
+  
+}
+.display2{
+  display: flex;
+  justify-content: space-between;
+}
+.tab3{
+  background-color: rgb(215, 245, 250);
+  width: 673px;
+  height: 40px;
+  padding-top: 10px;
+  text-align: center;
+}
+.information2{
+  padding-top: 5px;
+  position: absolute;
+  padding-left: 300px;
+  
+
+}
+.information{
+  padding-top: 5px;
+width: 30%;
+}
+select {
+  width: 60px; /* Chiều rộng */
+  height: 26px; /* Chiều cao */
+  
+}
+textarea {
+  width: 375px; /* Chiều rộng */
+  height: 240px; /* Chiều cao */
+  position: absolute;
+  resize: none; /* Ngăn không cho người dùng điều chỉnh kích thước */
+}
+.label2{
+  background-color: white;
+  width: 124px;
+ 
+  text-align: center;
+}
+button:hover{
+  background-color:rgb(190, 137, 230);
+}
+.background{
+  background-color: rgb(201, 241, 116);
+  width: 673px;
+  height: 270px;
+}
+
+
+
+
+
+                  
