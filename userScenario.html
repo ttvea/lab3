@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>NguyenThienIT</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+
+    <!-- GLOBAL MANDATORY STYLES -->
+
+    <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- PAGE LEVEL PLUGIN STYLES -->
+    <link href="css/animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/cssLab4.css">
+
+    <!-- THEME STYLES -->
+    <link href="css/layout.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
+
+<body class="image" background="img/back.png">
+    <!--========== HEADER ==========-->
+    <header class="header navbar-fixed-top">
+        <!-- Navbar -->
+        <nav class="navbar" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="flexMenu">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a class="logo-wrap" href="#body">
+                            <img class="logo-img logo-img-main" src="img/logo.png" alt="Asentus Logo">
+                            <img class="logo-img logo-img-active" src="img/logo-dark.png" alt="Asentus Logo">
+                        </a>
+                    </div>
+                    <!-- End Logo -->
+                    <div>
+                        <div class="paddingTop">
+                            <ul class="flexMenu">
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover"
+                                        href="index.html">Home</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover"
+                                        href="about.html">About</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover"
+                                        href="tab1.html" onclick="showLab4()">Lab4
+                                    </a>
+
+                                </li>
+                                <div id="tab1" class="tab-content" style="display: none;">
+                                    <button class="tab-button"><a href="tab1.html"><b
+                                                style="color: aqua;">Tab1</b></a></button>
+
+                                </div>
+
+                                <div id="tab2" class="tab-content" style="display: none;">
+                                    <button class="tab-button"><a href="lab4.html"><b
+                                                style="color: aqua;">Tab2</b></button>
+                                </div>
+
+                                <div id="tab3" class="tab-content" style="display: none;">
+                                    <button class="tab-button"><a href="lab4.html"><b
+                                                style="color: aqua;">Tab3</b></button>
+                                </div>
+                                <script>
+                                    function showLab4() {
+                                        var tabContent = document.getElementsByClassName("tab-content");
+                                        for (var i = 0; i < tabContent.length; i++) {
+                                            tabContent[i].style.display = "none";
+                                        }
+
+                                        document.getElementById("tab1").style.display = "block";
+                                        document.getElementById("tab2").style.display = "block";
+                                        document.getElementById("tab3").style.display = "block";
+                                    }
+
+
+
+                                </script>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover"
+                                        href="userScenario.html" style="color: aqua;">User Scenario</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover"
+                                        href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse nav-collapse">
+
+                </div>
+                <!-- End Navbar Collapse -->
+            </div>
+        </nav>
+        <!-- Navbar -->
+    </header>
+
+    <!-- About -->
+    <div id="about" class="paddingTop2">
+        <div class="container content-lg">
+            <div class="row">
+                <div class="col-sm-3 sm-margin-b-30">
+                    <div class="text-right sm-text-left">
+                        <h2 class="margin-b-0" style="color: rgb(29, 216, 216);">Link Figma</h2>
+                        <p style="color: rgb(205, 205, 105);"><b>All Steps:&nbsp;<a style="color: rgb(205, 205, 105);"
+                                    href="https://www.figma.com/file/H0dAcdIc9sEHMVKuQrK5za/Scenario-Mapping-Template-(Copy)?type=whiteboard&node-id=0%3A1&t=yqY1dST2siwNghij-1">User
+                                    Scenario</a></b></p>
+                        <p style="color: rgb(205, 205, 105);"><b>Step 4:&nbsp;<a style="color: rgb(205, 205, 105);"
+                                    href="https://www.figma.com/file/aetkzXQ0PqawgDSrvh6hrA/Untitled?type=design&node-id=0%3A1&mode=design&t=uqkG1VP2rwyjy2pr-1">Sign
+                                    in
+                                </a></b></p>
+                        <a
+                            href="https://www.figma.com/file/H0dAcdIc9sEHMVKuQrK5za/Scenario-Mapping-Template-(Copy)?type=whiteboard&node-id=0%3A1&t=yqY1dST2siwNghij-1">
+                            <img src="img/userScenario.png" alt="avatar"
+                                style="width: 200px; height: 300px; border-radius: 10px;">
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-8 col-sm-offset-1">
+
+                    <div
+                        style="background-image: url(img/book.jpeg); width: 700px; height: 499px; background-size: cover;">
+                        <div class="pad">
+                            <div>
+                                <h1 style="padding-left: 100px;">Sign In</h1>
+                            </div>
+                            <div style="padding: 10px;">
+                                <input class="login" type="text" id="username" placeholder="Username" autofocus>
+                            </div>
+                            <div style="padding: 10px;">
+                                <input class="login" type="password" id="pass" placeholder="Password">
+                            </div>
+                            <div style="display: inline-flex;">
+                                <div class="flexRd" style="padding-left: 15px;">
+                                    <input class="radio" id="rd" type="radio">
+                                    <label style="padding:4px;" for="rd">Remember me</label>
+                                </div>
+                                <div>
+                                    <label style="padding:4px;padding-left: 65px; ;"><a href=""
+                                            style="color: rgb(227, 229, 86)">Forgot Password</a></label>
+                                </div>
+                            </div>
+                            <div class="signIn">
+                                <button onclick="checkAcc" class="btn"><b style="font-size: 15px;">Sign In</b></button>
+                            </div>
+                            <div style="display: inline-flex; padding-left: 42px;">
+                                <div style="padding-left: 15px;">
+
+                                    <label style="padding:4px;">Don't have account?</label>
+                                </div>
+                                <div>
+                                    <label style="padding:4px;padding-left: 5px; ;"><a href=""
+                                            style="color: rgb(227, 229, 86)">Sign in</a></label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <!-- Progress Box -->
+
+                    <!-- End Progress Box -->
+                </div>
+            </div>
+            <!--// end row -->
+        </div>
+    </div>
+    <!-- End About -->
+</body>
+<script>
+    var listAcc = [];
+    function checkAcc() {
+        var user = document.getElementById("username").value;
+        var pass = document.getElementById("pass").value;
+        var acc = {
+          user: user,
+          pass: pass
+        };
+        listAcc.push(acc);
+        setT();
+    }
+    function setT(){
+        var user = document.getElementById("username");
+        user.value="";
+        var pass = document.getElementById("pass");
+        pass.value="";
+    }
+</script>
+
+</html>
